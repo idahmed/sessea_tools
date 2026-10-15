@@ -21,4 +21,11 @@ export const SITES = [
     blurb: 'Convert, trim, fade, split, loop, and more — no uploads.',
     href: 'https://audio.sessea.com',
   },
+  {
+    id: 'hw',
+    label: 'Hardware test',
+    title: 'Hardware test',
+    blurb: 'Mic, camera, speakers, keyboard, and mouse — in the browser.',
+    href: 'https://hw.sessea.com',
+  },
 ]
