@@ -1,0 +1,137 @@
+:root,
+[data-theme='light'] {
+  --ink: #1c1c1c;
+  --muted: #6b6b6b;
+  --panel: #ffffff;
+  --bg: #f3f3f3;
+  --line: #e6e6e6;
+  --key: #f2f2f2;
+  --key-hover: #e8e8e8;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  --font-brand: 'Syne', sans-serif;
+}
+
+[data-theme='dark'] {
+  --ink: #f0f0f0;
+  --muted: #9a9a9a;
+  --panel: #1e1e1e;
+  --bg: #141414;
+  --line: #2e2e2e;
+  --key: #2a2a2a;
+  --key-hover: #333333;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-brand);
+  background:
+    radial-gradient(circle at top, rgba(28, 28, 28, 0.06), transparent 40%),
+    var(--bg);
+}
+
+[data-theme='dark'] body {
+  background:
+    radial-gradient(circle at top, rgba(240, 240, 240, 0.05), transparent 40%),
+    var(--bg);
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  width: min(100%, 40rem);
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem;
+}
+
+.brand {
+  position: relative;
+  text-align: center;
+  padding-inline: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 8vw, 3.4rem);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.brand p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0;
+  background: var(--panel);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.tool {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.1s ease, transform 0.1s ease;
+}
+
+.tool:hover {
+  background: var(--key-hover);
+}
+
+.tool:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.tool strong {
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.tool span {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
