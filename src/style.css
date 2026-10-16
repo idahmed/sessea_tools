@@ -562,6 +562,20 @@ textarea {
 }
 
 /* —— footer —— */
+.ad-band {
+  width: min(100%, 52rem);
+  min-height: 5.5rem;
+  margin: 0 auto 0.5rem;
+  padding: 0 1.25rem;
+}
+
+.ad-band .ad-unit {
+  min-height: 5.5rem;
+  border: 1px dashed var(--line);
+  border-radius: 0.65rem;
+  background: color-mix(in srgb, var(--panel) 80%, transparent);
+}
+
 .site-footer {
   padding: 1.5rem 1.25rem 2rem;
   border-top: 1px solid var(--line);
