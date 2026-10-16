@@ -8,15 +8,17 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg'],
+      includeAssets: ['favicon.svg', 'robots.txt', 'sitemap.xml'],
       manifest: {
         name: 'sessea tools',
         short_name: 'sessea',
-        description: 'Browser tools by sessea — calculator, image, and audio.',
-        theme_color: '#1c1c1c',
-        background_color: '#f3f3f3',
+        description:
+          'Private browser utilities — calculator, image, audio, and hardware tests.',
+        theme_color: '#1a5c4a',
+        background_color: '#eef2f0',
         display: 'standalone',
         start_url: '/',
+        lang: 'en',
         icons: [
           {
             src: '/favicon.svg',
@@ -27,7 +29,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,woff,woff2,ico}'],
+        globPatterns: ['**/*.{js,css,html,svg,woff,woff2,ico,txt,xml}'],
       },
     }),
   ],
