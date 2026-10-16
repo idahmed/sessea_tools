@@ -3,7 +3,7 @@ export const SITE_URL = 'https://tools.sessea.com'
 
 export const SITE_NAME = 'sessea tools'
 
-export const CONTACT_EMAIL = 'hello@sessea.com'
+export const CONTACT_EMAIL = 'idahmed.yassine@gmail.com'
 
 /** Update these when you deploy each app. */
 export const SITES = [
