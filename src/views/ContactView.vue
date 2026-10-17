@@ -27,6 +27,24 @@ function send() {
       </p>
     </header>
 
+    <div class="prose-body" style="margin-bottom: 1.5rem">
+      <p>
+        Use this page for product feedback, bug reports, or privacy questions about
+        the calculator, image tools, audio tools, or hardware tests. We read every
+        message that reaches the inbox above.
+      </p>
+      <p>
+        For how data and ads work, see
+        <RouterLink to="/privacy">Privacy</RouterLink>
+        and
+        <RouterLink to="/terms">Terms</RouterLink>.
+        For product background, see
+        <RouterLink to="/about">About</RouterLink>
+        or the
+        <RouterLink to="/guides">Guides</RouterLink>.
+      </p>
+    </div>
+
     <form class="contact-form" @submit.prevent="send">
       <label>
         <span>Name</span>

@@ -12,8 +12,10 @@ const route = useRoute()
 
 const links = [
   { to: '/', label: 'Tools', exact: true },
+  { to: '/guides', label: 'Guides' },
   { to: '/about', label: 'About' },
   { to: '/privacy', label: 'Privacy' },
+  { to: '/terms', label: 'Terms' },
   { to: '/contact', label: 'Contact' },
 ]
 

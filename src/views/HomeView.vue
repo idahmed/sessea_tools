@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import HeroSignal from '@/components/HeroSignal.vue'
 import JsonLd from '@/components/JsonLd.vue'
+import { GUIDES } from '@/lib/guides'
 import { HOME_FAQ, SITE_URL, SITES } from '@/lib/sites'
 
 const faqSchema = computed(() => ({
@@ -85,7 +86,8 @@ const hubSchema = computed(() => ([
         <h2 id="tools-title">Four free utilities. One privacy promise.</h2>
         <p>
           Open a tool below. Files and media stay in your browser — we never host
-          your uploads.
+          your uploads. Prefer reading first?
+          <RouterLink to="/guides">Start with a guide</RouterLink>.
         </p>
       </div>
 
@@ -104,6 +106,37 @@ const hubSchema = computed(() => ([
       </ol>
     </section>
 
+    <section class="seo-block" aria-labelledby="how-title">
+      <h2 id="how-title">Built for everyday work, not cloud lock-in</h2>
+      <p>
+        sessea is a small set of browser utilities for students, makers, and anyone
+        who wants a fast edit without creating an account. Convert or resize a photo,
+        trim a voice note, run a scientific calculation, or check a mic before a call —
+        then close the tab. In-memory media is discarded; only downloads you choose
+        remain on your device.
+      </p>
+      <p>
+        The hub at sessea.com points to focused apps on their own subdomains so each
+        tool stays fast and clear. They share one idea: useful software that respects
+        the machine it runs on. Advertising may appear to keep the tools free; file
+        processing itself is designed to stay local. Read the
+        <RouterLink to="/privacy">privacy policy</RouterLink>
+        and
+        <RouterLink to="/terms">terms</RouterLink>
+        for the full picture.
+      </p>
+    </section>
+
+    <section class="seo-block" aria-labelledby="guides-title">
+      <h2 id="guides-title">Guides</h2>
+      <p>Short articles if you want context before you open a tool.</p>
+      <ul class="home-guides">
+        <li v-for="guide in GUIDES" :key="guide.slug">
+          <RouterLink :to="`/guides/${guide.slug}`">{{ guide.title }}</RouterLink>
+        </li>
+      </ul>
+    </section>
+
     <section class="seo-block" aria-labelledby="faq-title">
       <h2 id="faq-title">Common questions</h2>
       <dl class="faq">
@@ -114,10 +147,14 @@ const hubSchema = computed(() => ([
       </dl>
     </section>
 
-    <section class="strip" aria-label="Privacy note">
+    <section class="strip" aria-label="Trust links">
       <p>
         No accounts. No uploads to our servers.
-        <RouterLink to="/privacy">Read the privacy policy</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        ·
+        <RouterLink to="/privacy">Privacy</RouterLink>
+        ·
+        <RouterLink to="/terms">Terms</RouterLink>
         ·
         <RouterLink to="/contact">Contact</RouterLink>
       </p>

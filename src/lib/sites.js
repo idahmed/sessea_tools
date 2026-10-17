@@ -1,5 +1,5 @@
 /** Public hub origin. */
-export const SITE_URL = 'https://tools.sessea.com'
+export const SITE_URL = 'https://sessea.com'
 
 export const SITE_NAME = 'sessea tools'
 
@@ -68,6 +68,10 @@ export const HOME_FAQ = [
   },
   {
     q: 'Where are the tools hosted?',
-    a: 'The hub is tools.sessea.com. Apps live on calc.sessea.com, img.sessea.com, audio.sessea.com, and hw.sessea.com.',
+    a: 'The hub is sessea.com. Apps live on calc.sessea.com, img.sessea.com, audio.sessea.com, and hw.sessea.com.',
+  },
+  {
+    q: 'Where can I read how the tools work?',
+    a: 'See the Guides section on sessea.com for local editing and hardware checklists, plus About, Privacy, and Terms.',
   },
 ]

@@ -19,10 +19,11 @@
       <section>
         <h2>1. Who we are</h2>
         <p>
-          This policy covers the sessea tools hub
-          (<a href="https://tools.sessea.com">tools.sessea.com</a>)
-          and the related apps linked from it (calculator, image tools, audio
-          tools, and hardware tests).
+          This policy covers the sessea tools hub at
+          <a href="https://sessea.com">sessea.com</a>
+          and the related apps linked from it: calculator (calc.sessea.com),
+          image tools (img.sessea.com), audio tools (audio.sessea.com), and
+          hardware tests (hw.sessea.com).
         </p>
       </section>
 
@@ -31,7 +32,8 @@
         <p>
           We do not require registration and we do not operate a user database
           for these tools. We do not receive the images, audio, or camera/mic
-          streams you process in the apps.
+          streams you process in the apps. We do not ask for your name or payment
+          details to use the free utilities.
         </p>
       </section>
 
@@ -40,7 +42,9 @@
         <p>
           Processing happens on your device using browser APIs. When you close
           a tab, in-memory media is discarded. Downloaded results are saved only
-          where you choose on your own machine.
+          where you choose on your own machine. Guides on
+          <RouterLink to="/guides">sessea.com/guides</RouterLink>
+          explain how common workflows stay local.
         </p>
       </section>
 
@@ -49,7 +53,7 @@
         <p>
           Some tools may store preferences (for example theme, last format, or
           calculator history) in your browser’s localStorage. That data stays on
-          your device and is not transmitted to us.
+          your device and is not transmitted to us as part of an account profile.
         </p>
       </section>
 
@@ -59,7 +63,8 @@
           Pages may display advertisements from Google AdSense and other
           advertising partners. Those partners may use cookies, device
           identifiers, and similar technologies to show ads and measure
-          performance across sites.
+          performance across sites. Advertising technology is separate from the
+          local handling of your project files.
         </p>
         <p>
           You can manage personalized ads in
@@ -94,7 +99,7 @@
         <h2>8. Changes</h2>
         <p>
           We may update this policy from time to time. The latest version will
-          always be posted on this page.
+          always be posted on this page with an updated date.
         </p>
       </section>
 
@@ -103,6 +108,10 @@
         <p>
           Questions about privacy:
           <RouterLink to="/contact">contact sessea</RouterLink>.
+          Related:
+          <RouterLink to="/terms">Terms of Service</RouterLink>
+          ·
+          <RouterLink to="/about">About</RouterLink>.
         </p>
       </section>
     </div>

@@ -491,6 +491,45 @@ textarea {
   font-weight: 600;
 }
 
+.guide-index {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.guide-index a {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.guide-index strong {
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+
+.guide-index span {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.home-guides {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.home-guides a {
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
 .prose-body section {
   display: grid;
   gap: 0.55rem;

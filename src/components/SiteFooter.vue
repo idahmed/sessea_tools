@@ -7,8 +7,10 @@ const year = new Date().getFullYear()
     <div class="footer-row">
       <RouterLink to="/">sessea</RouterLink>
       <span class="dot" aria-hidden="true">·</span>
+      <RouterLink to="/guides">Guides</RouterLink>
       <RouterLink to="/about">About</RouterLink>
       <RouterLink to="/privacy">Privacy</RouterLink>
+      <RouterLink to="/terms">Terms</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </div>
     <p class="footer-copy">© {{ year }} sessea · tools that stay on your machine</p>

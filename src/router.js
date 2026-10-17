@@ -1,9 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useSeo } from '@/composables/useSeo'
+import { getGuide } from '@/lib/guides'
 import AboutView from '@/views/AboutView.vue'
 import ContactView from '@/views/ContactView.vue'
+import GuideView from '@/views/GuideView.vue'
+import GuidesView from '@/views/GuidesView.vue'
 import HomeView from '@/views/HomeView.vue'
 import PrivacyView from '@/views/PrivacyView.vue'
+import TermsView from '@/views/TermsView.vue'
 
 const { setPageSeo } = useSeo()
 
@@ -29,6 +33,25 @@ const routes = [
     },
   },
   {
+    path: '/guides',
+    name: 'guides',
+    component: GuidesView,
+    meta: {
+      title: 'Guides — sessea private browser tools',
+      description:
+        'Guides for local image and audio edits, hardware tests, and privacy-minded browser tools from sessea.',
+    },
+  },
+  {
+    path: '/guides/:slug',
+    name: 'guide',
+    component: GuideView,
+    meta: {
+      title: 'Guide — sessea tools',
+      description: 'Practical guide from sessea tools.',
+    },
+  },
+  {
     path: '/privacy',
     name: 'privacy',
     component: PrivacyView,
@@ -36,6 +59,16 @@ const routes = [
       title: 'Privacy Policy — sessea tools',
       description:
         'Privacy policy for sessea tools. Local browser processing, no user accounts, and how Google AdSense partners may use cookies.',
+    },
+  },
+  {
+    path: '/terms',
+    name: 'terms',
+    component: TermsView,
+    meta: {
+      title: 'Terms of Service — sessea tools',
+      description:
+        'Terms of Service for sessea.com and related calculator, image, audio, and hardware tools.',
     },
   },
   {
@@ -59,6 +92,16 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
+  if (to.name === 'guide') {
+    const guide = getGuide(to.params.slug)
+    setPageSeo({
+      title: guide ? `${guide.title} — sessea` : 'Guide not found — sessea',
+      description: guide?.description || 'Guide from sessea tools.',
+      path: to.path,
+    })
+    return
+  }
+
   setPageSeo({
     title: to.meta.title || 'sessea tools',
     description:
