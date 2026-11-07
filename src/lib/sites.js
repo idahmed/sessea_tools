@@ -8,7 +8,7 @@ export const CONTACT_EMAIL = 'idahmed.yassine@gmail.com'
 export const HOME_FAQ = [
   {
     q: 'Are sessea tools free?',
-    a: 'Yes. The calculator, image tools, audio tools and hardware tests are free and need no account. Ads on the pages pay for hosting.',
+    a: 'Yes. The calculator, unit converter, image tools, audio tools, hardware tests and typing test are free and need no account. Ads on the pages pay for hosting.',
   },
   {
     q: 'Do you upload my files?',

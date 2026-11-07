@@ -6,7 +6,7 @@ export default {
     'What "processed in your browser" means technically, which browser features make it possible, and a two-minute test to verify that a tool does not upload your files.',
   published: '2026-10-17',
   updated: '2026-11-07',
-  tools: ['image', 'audio', 'hardware', 'calculator'],
+  tools: ['image', 'audio', 'hardware', 'calculator', 'unit-converter', 'typing-test'],
   sections: [
     {
       heading: 'Upload tools and local tools',
@@ -29,6 +29,8 @@ export default {
               ['Audio tools', 'MP3 and WAV encoders in JavaScript, MediaRecorder', 'Turn the edited samples back into a file you can download'],
               ['Hardware tests', 'getUserMedia, Web Audio', 'Show your microphone and camera streams in the page and generate test tones'],
               ['Calculator', 'Plain JavaScript', 'Parses and evaluates expressions without sending them anywhere'],
+              ['Unit converter', 'Plain JavaScript', 'Multiplies by fixed conversion factors stored in the page'],
+              ['Typing test', 'Plain JavaScript, keyboard events', 'Compares each character you type with the text and times you in the page'],
             ],
           },
         },
@@ -56,7 +58,7 @@ export default {
           ul: [
             'Your files and their edited versions, which live in the tab memory until you close it or download them.',
             'Camera and microphone streams, which are displayed in the page and discarded when you stop the test.',
-            'A few preferences saved in your browser storage: theme, last output format and quality, calculator history and memory. Clearing the site data in your browser removes them.',
+            'A few preferences saved in your browser storage: theme, last output format and quality, calculator history and memory, recent unit conversions and typing scores. Clearing the site data in your browser removes them.',
           ],
         },
       ],

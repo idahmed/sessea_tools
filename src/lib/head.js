@@ -13,7 +13,7 @@ const STATIC_PAGES = {
   home: {
     title: 'sessea tools: free private browser utilities',
     description:
-      'Free browser tools by sessea: scientific calculator, image editor, audio editor and hardware tests. Files are processed on your device, with no uploads and no account.',
+      'Free browser tools by sessea: scientific calculator, unit converter, image and audio editors, hardware tests and a typing test. Files stay on your device, with no account.',
   },
   about: {
     title: 'About sessea tools',
@@ -21,9 +21,9 @@ const STATIC_PAGES = {
       'Who builds sessea, how the tools process files on your device, and how the site is funded.',
   },
   guides: {
-    title: 'Guides: images, audio, hardware tests and calculations',
+    title: 'Guides: images, audio, devices, units, typing and calculations',
     description:
-      'Practical guides on image formats, audio editing, device troubleshooting and scientific calculator use, written around the sessea browser tools.',
+      'Practical guides on image formats, audio editing, device troubleshooting, unit conversions, typing speed and calculator use, written around the sessea browser tools.',
   },
   privacy: {
     title: 'Privacy policy | sessea tools',
@@ -32,7 +32,7 @@ const STATIC_PAGES = {
   },
   terms: {
     title: 'Terms of service | sessea tools',
-    description: 'Terms of service for sessea.com and the related calculator, image, audio and hardware test apps.',
+    description: 'Terms of service for sessea.com and the related calculator, unit converter, image, audio, hardware test and typing test apps.',
   },
   contact: {
     title: 'Contact sessea tools',

@@ -30,7 +30,8 @@ function send() {
     <div class="prose-body" style="margin-bottom: 1.5rem">
       <p>
         Use this page for product feedback, bug reports, or privacy questions about
-        the calculator, image tools, audio tools, or hardware tests. We read every
+        the calculator, unit converter, image tools, audio tools, hardware tests
+        or typing test. We read every
         message that reaches the inbox above.
       </p>
       <p>

@@ -11,7 +11,8 @@
         <h2>1. Acceptance</h2>
         <p>
           By using the sessea tools hub at sessea.com and the related apps
-          (calculator, image tools, audio tools, and hardware tests), you agree
+          (calculator, unit converter, image tools, audio tools, hardware tests,
+          and typing speed test), you agree
           to these Terms of Service. If you do not agree, do not use the services.
         </p>
       </section>

@@ -6,7 +6,11 @@ import { TOOLS } from '@/lib/tools'
 const UPDATES = [
   {
     date: '2026-11-07',
-    text: 'Added a documentation page for each tool and nine new guides on image formats, file size, photo metadata, audio bitrate, device troubleshooting and calculator use. Fixed the calculator so function keys no longer discard the rest of an expression.',
+    text: 'Added a documentation page for each tool, including the new unit converter and typing test, and eleven new guides on image formats, file size, photo metadata, audio bitrate, device troubleshooting, unit conversions, typing speed and calculator use. Fixed the calculator so function keys no longer discard the rest of an expression.',
+  },
+  {
+    date: '2026-11-01',
+    text: 'Released the unit converter and the typing speed test.',
   },
   {
     date: '2026-10-17',
@@ -26,7 +30,8 @@ const UPDATES = [
       <h1>About sessea tools</h1>
       <p class="lede">
         Small, focused browser tools for calculating, editing images and audio,
-        and checking devices, built so your files stay on your machine.
+        checking devices, converting units and practising typing, built so your
+        files stay on your machine.
       </p>
     </header>
 

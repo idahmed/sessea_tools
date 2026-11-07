@@ -10,6 +10,8 @@ import reduceImageSize from '@/content/guides/reduce-image-file-size'
 import resizeConvert from '@/content/guides/resize-convert-images'
 import calcMistakes from '@/content/guides/scientific-calculator-mistakes'
 import trimConvert from '@/content/guides/trim-convert-audio'
+import typingSpeed from '@/content/guides/typing-speed-wpm'
+import unitMistakes from '@/content/guides/unit-conversion-mistakes'
 import webcam from '@/content/guides/webcam-not-working'
 import { slugify } from '@/lib/slug'
 
@@ -52,6 +54,8 @@ export const GUIDES = [
   keyboardMouse,
   degreesRadians,
   calcMistakes,
+  unitMistakes,
+  typingSpeed,
   localTools,
 ].map(prepare)
 

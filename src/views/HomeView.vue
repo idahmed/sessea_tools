@@ -18,8 +18,8 @@ const latestGuides = [...GUIDES]
         <p class="brand-mark">sessea</p>
         <h1>Free private browser tools that stay on your machine.</h1>
         <p class="lede">
-          Scientific calculator, image editor, audio editor, and hardware tests —
-          no uploads, no accounts.
+          Scientific calculator, unit converter, image and audio editors,
+          hardware tests and a typing test. No uploads, no accounts.
         </p>
         <div class="hero-cta">
           <a class="cta" href="#tools">Browse tools</a>
@@ -30,10 +30,10 @@ const latestGuides = [...GUIDES]
 
     <section id="tools" class="tools" aria-labelledby="tools-title">
       <div class="tools-head">
-        <h2 id="tools-title">Four free utilities. One privacy promise.</h2>
+        <h2 id="tools-title">Six free utilities. One privacy promise.</h2>
         <p>
-          Open a tool below. Files and media stay in your browser — we never host
-          your uploads. Prefer reading first?
+          Open a tool below. Files and media stay in your browser, and we never
+          host your uploads. Prefer reading first?
           <RouterLink to="/guides">Start with a guide</RouterLink>.
         </p>
       </div>
@@ -58,15 +58,16 @@ const latestGuides = [...GUIDES]
       <p>
         sessea is a small set of browser utilities for students, makers, and anyone
         who wants a fast edit without creating an account. Convert or resize a photo,
-        trim a voice note, run a scientific calculation, or check a mic before a call —
-        then close the tab. In-memory media is discarded; only downloads you choose
+        trim a voice note, run a scientific calculation, convert a recipe from cups
+        to millilitres, check a mic before a call, or time your typing, then close
+        the tab. In-memory media is discarded; only downloads you choose
         remain on your device.
       </p>
       <p>
         The hub at sessea.com points to focused apps on their own subdomains so each
         tool stays fast and clear. They share one idea: useful software that respects
-        the machine it runs on. Advertising may appear to keep the tools free; file
-        processing itself is designed to stay local. Read the
+        the machine it runs on. Advertising may appear to keep the tools free, but
+        file processing itself is designed to stay local. Read the
         <RouterLink to="/privacy">privacy policy</RouterLink>
         and
         <RouterLink to="/terms">terms</RouterLink>
@@ -77,8 +78,8 @@ const latestGuides = [...GUIDES]
     <section class="seo-block" aria-labelledby="guides-title">
       <h2 id="guides-title">Latest guides</h2>
       <p>
-        Practical articles on image and audio formats, device troubleshooting and
-        calculator use. <RouterLink to="/guides">See all guides</RouterLink>.
+        Practical articles on image and audio formats, device troubleshooting,
+        unit conversions, typing speed and calculator use. <RouterLink to="/guides">See all guides</RouterLink>.
       </p>
       <ul class="home-guides">
         <li v-for="guide in latestGuides" :key="guide.slug">

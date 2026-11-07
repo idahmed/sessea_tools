@@ -79,6 +79,96 @@ const RAW_TOOLS = [
     ],
   },
   {
+    id: 'unit-converter',
+    title: 'Unit converter',
+    host: 'unitconverter.sessea.com',
+    href: 'https://unitconverter.sessea.com',
+    blurb: 'length, weight, temperature, volume, data and seven more categories',
+    seoTitle: 'Free unit converter: metric, imperial, US and UK units',
+    seoDescription:
+      'Convert 120 units in 12 categories, from length and temperature to data, pressure and energy, using exact official factors. US and UK volumes listed separately.',
+    category: 'UtilitiesApplication',
+    updated: '2026-11-07',
+    headline: 'Unit converter',
+    lede: 'A converter for everyday and technical units that uses the exact defined factors, shows your value in every unit of the category at once, and remembers your recent conversions on your device.',
+    sections: [
+      {
+        heading: 'Categories and units',
+        blocks: [
+          {
+            table: {
+              caption: 'The 12 categories and the units in each',
+              head: ['Category', 'Units'],
+              rows: [
+                ['Length', 'nanometre to light-year, including inch, foot, yard, mile and nautical mile (13 units)'],
+                ['Mass', 'microgram to long ton, including carat, ounce, pound and stone (11 units)'],
+                ['Temperature', 'Celsius, Fahrenheit, Kelvin and Rankine'],
+                ['Volume', 'millilitre, litre, cubic metre, cubic inch and foot, US teaspoon to US gallon, UK fluid ounce, pint and gallon (17 units)'],
+                ['Area', 'square millimetre to square kilometre, hectare, acre and the imperial squares (10 units)'],
+                ['Speed', 'm/s, km/h, ft/s, mph, knot and the speed of light'],
+                ['Time', 'nanosecond to century, with an average month and a 365.25-day year (12 units)'],
+                ['Data', 'bit to petabyte in decimal steps, plus kibibyte to tebibyte in binary steps (14 units)'],
+                ['Pressure', 'pascal to megapascal, millibar, bar, atmosphere, PSI, mmHg, torr and inHg (11 units)'],
+                ['Energy', 'joule, kilojoule, megajoule, calorie, kilocalorie, Wh, kWh, BTU, foot-pound and electronvolt'],
+                ['Power', 'watt, kilowatt, megawatt, horsepower, metric horsepower and BTU per hour'],
+                ['Angle', 'degree, radian, gradian, arcminute, arcsecond and turn'],
+              ],
+            },
+          },
+          { p: 'Each category has its own address, such as unitconverter.sessea.com/length or /temperature, so you can bookmark the one you use most.' },
+        ],
+      },
+      {
+        heading: 'How to use it',
+        blocks: [
+          {
+            ol: [
+              'Pick a category.',
+              'Type a value. Commas are ignored, so 1,500 works, and so does scientific notation like 2.5e6.',
+              'Choose the From and To units, or press the ⇄ button to swap them.',
+              'Read the result. Click it to copy the number to your clipboard.',
+              'Below the result, a list shows your value in every other unit of the category. Click a row to make it the target unit.',
+            ],
+          },
+          { p: 'Press / to jump to the value field and Esc to clear it. After you stop typing for a moment, the conversion is added to Recent, which keeps the last 20. Click a recent entry to restore it, or remove it with ×.' },
+        ],
+      },
+      {
+        heading: 'Precision',
+        blocks: [
+          { p: 'The factors are the exact definitions used by standards bodies like NIST and the SI. An inch is exactly 25.4 mm, a pound exactly 0.45359237 kg, and a US gallon exactly 3.785411784 litres. Temperatures use formulas instead of a single factor, because the scales have different zero points.' },
+          { p: 'Results show up to 12 significant digits. Very large values (from 10¹⁵) and very small ones (below 0.000001) switch to scientific notation, so 1 light-year in millimetres reads 9.46073047258e+18, meaning 9.46 × 10¹⁸.' },
+        ],
+      },
+      {
+        heading: 'Units that are easy to mix up',
+        blocks: [
+          {
+            ul: [
+              'US and UK volumes differ. A US gallon is about 3.79 litres, a UK gallon 4.55 litres. A US pint is 473 ml, a UK pint 568 ml. The converter lists them as separate units.',
+              'Kilobyte (KB) here means 1000 bytes and kibibyte (KiB) 1024 bytes. Operating systems do not agree on this, which is why a "500 GB" drive can show as 465 GB.',
+              'A food Calorie is a kilocalorie (4184 joules). The Calorie unit in the list is the small calorie of 4.184 joules.',
+              'Horsepower (mechanical, about 745.7 W) and metric horsepower (PS, 735.5 W) are about 1.4% apart.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Privacy and offline use',
+        blocks: [
+          { p: 'Conversions are calculated in your browser. Your recent conversions, last category, units and theme are kept in your browser storage on your device. Clear the site data in your browser to remove them. After the first visit the converter works offline.' },
+        ],
+      },
+    ],
+    faq: [
+      { q: 'How do I convert Celsius to Fahrenheit?', a: 'Multiply by 9/5 and add 32. 100 °C is 212 °F, and 37 °C is 98.6 °F.' },
+      { q: 'Why do my cup or pint conversions not match a British recipe?', a: 'British recipes use UK units, which are larger than US ones. Pick the units marked (UK).' },
+      { q: 'Is a kilobyte 1000 or 1024 bytes?', a: 'In this converter a kilobyte is 1000 bytes, following the SI prefix. Use kibibyte for 1024 bytes.' },
+      { q: 'How many digits are shown?', a: 'Up to 12 significant digits, which is far more than any measurement you can make at home.' },
+      { q: 'Are my conversions saved anywhere?', a: 'Only in your browser on your device, as the Recent list. They are never sent to a server.' },
+    ],
+  },
+  {
     id: 'image',
     title: 'Image tools',
     host: 'img.sessea.com',
@@ -287,6 +377,82 @@ const RAW_TOOLS = [
       { q: 'How do I know which speaker is which?', a: 'Each side uses a different pitch: the left tone is lower, the right tone is higher, and both play a middle tone.' },
       { q: 'Can I test for a mouse double-click fault?', a: 'Yes. Click slowly ten times and check that the click counter shows exactly ten.' },
       { q: 'Does it work on phones?', a: 'The microphone, camera and speaker tests work on phones. The keyboard and mouse tests need a physical keyboard or mouse.' },
+    ],
+  },
+  {
+    id: 'typing-test',
+    title: 'Typing speed test',
+    host: 'typingspeedtest.sessea.com',
+    href: 'https://typingspeedtest.sessea.com',
+    blurb: 'words per minute and accuracy, with your last 20 scores',
+    seoTitle: 'Free typing speed test: WPM and accuracy',
+    seoDescription:
+      'Measure your typing speed in words per minute and your accuracy on a text of 20 to 2000 characters. Live stats, best score and your last 20 results, saved on your device.',
+    category: 'EducationalApplication',
+    updated: '2026-11-07',
+    headline: 'Typing speed test',
+    lede: 'A short, no-signup typing test that measures your words per minute and accuracy while you type, and keeps a history of your scores in your browser so you can see yourself improve.',
+    sections: [
+      {
+        heading: 'How the test works',
+        blocks: [
+          {
+            ol: [
+              'Choose the length of the text: 100, 200, 300 or 500 characters, or type your own number between 20 and 2000. The default is 200.',
+              'Click the text and start typing. The timer starts with your first character, so you can read the text first without losing time.',
+              'Type until you reach the end of the text. The test stops by itself on the last character.',
+              'Your result appears with WPM, accuracy and time, and is saved to the Scores table.',
+            ],
+          },
+          { p: 'The text is a random sequence of common English words in lower case, with no punctuation, so the test measures typing rather than reading difficult words. Each new test generates a new text. Press Esc or the Cancel button at any time to stop and load a new one. After a result, Retry same text lets you repeat the same words, which is the fairest way to measure progress over a few attempts.' },
+        ],
+      },
+      {
+        heading: 'Reading the text as you type',
+        blocks: [
+          {
+            table: {
+              caption: 'What the colours in the text mean',
+              head: ['Look', 'Meaning'],
+              rows: [
+                ['Grey', 'Not typed yet'],
+                ['Dark', 'Typed correctly'],
+                ['Red', 'A mistake. Press Backspace to go back and fix it'],
+                ['Underlined', 'The next character to type'],
+              ],
+            },
+          },
+          { p: 'Above the text, four live counters show your current WPM, accuracy, elapsed time and progress through the text.' },
+        ],
+      },
+      {
+        heading: 'How WPM and accuracy are calculated',
+        blocks: [
+          { p: 'WPM (words per minute) uses the standard typing convention that one word is five characters, spaces included. The test counts only the characters that are correct in your final text, divides by five, and divides by the minutes elapsed. 250 correct characters in one minute is 50 WPM. Uncorrected mistakes therefore lower your speed.' },
+          { p: 'Accuracy counts every wrong keystroke as an error, even if you fix it afterwards with Backspace. A run with no wrong key presses scores 100%. This makes accuracy a measure of how cleanly you typed, while WPM measures the result.' },
+          { note: 'Speed and accuracy pull against each other. If your accuracy is below about 95%, slowing down a little usually raises your WPM, because fixing mistakes costs more time than it saves.' },
+        ],
+      },
+      {
+        heading: 'Scores and progress',
+        blocks: [
+          { p: 'Each finished test is added to the Scores table with its WPM, accuracy, text length, time and date. The table keeps your last 20 results and shows your best WPM in the heading. When you beat your best, the result says "New best!". Use Clear to start over.' },
+          { p: 'For a fair comparison between days, use the same text length each time. Short texts give more variable results, because one hesitation weighs more in 100 characters than in 500.' },
+        ],
+      },
+      {
+        heading: 'Privacy and offline use',
+        blocks: [
+          { p: 'What you type is checked in the page and never sent anywhere. Your scores, chosen text length and theme are stored in your browser on your device. Clear the site data in your browser to remove them. After the first visit the test also works offline.' },
+        ],
+      },
+    ],
+    faq: [
+      { q: 'What is a good typing speed?', a: '30 to 50 WPM is common for people who type regularly, 50 to 80 WPM is fast, and practised touch typists go beyond 80. Accuracy matters as much as speed.' },
+      { q: 'Why is my WPM lower than on other tests?', a: 'This test counts only correct characters, and some tests count every character typed. Text length and word choice also change results.' },
+      { q: 'Do I have to fix my mistakes?', a: 'No. The test ends when you reach the end of the text, but uncorrected mistakes are not counted as correct characters, which lowers your WPM.' },
+      { q: 'Does fixing a mistake restore my accuracy?', a: 'No. Accuracy counts every wrong key press, so a fixed mistake still counts. It shows how cleanly you typed.' },
+      { q: 'Are my scores uploaded?', a: 'No. They are saved in your browser on your device only.' },
     ],
   },
 ]

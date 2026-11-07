@@ -22,8 +22,9 @@
           This policy covers the sessea tools hub at
           <a href="https://sessea.com">sessea.com</a>
           and the related apps linked from it: calculator (calc.sessea.com),
-          image tools (img.sessea.com), audio tools (audio.sessea.com), and
-          hardware tests (hw.sessea.com).
+          unit converter (unitconverter.sessea.com), image tools (img.sessea.com),
+          audio tools (audio.sessea.com), hardware tests (hw.sessea.com), and
+          typing speed test (typingspeedtest.sessea.com).
         </p>
       </section>
 
