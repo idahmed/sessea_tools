@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Main site
 Sitemap: https://sessea.com/sitemap.xml
+
+# Tool subdomains (each also lists its own sitemap in its robots.txt)
+Sitemap: https://calc.sessea.com/sitemap.xml
+Sitemap: https://unitconverter.sessea.com/sitemap.xml
+Sitemap: https://img.sessea.com/sitemap.xml
+Sitemap: https://audio.sessea.com/sitemap.xml
+Sitemap: https://hw.sessea.com/sitemap.xml
+Sitemap: https://typingspeedtest.sessea.com/sitemap.xml
