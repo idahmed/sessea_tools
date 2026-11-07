@@ -39,13 +39,13 @@ const UPDATES = [
       <section>
         <h2>Who builds sessea</h2>
         <p>
-          sessea is built and maintained by an independent software developer who
-          wanted everyday utilities without the usual trade-off: upload your file to
-          a stranger's server, or install yet another app. Every tool, guide and
-          page on this site is written, tested and fixed by the same person, and
-          every message sent through the
+          sessea is built and maintained by Yassine, an independent software
+          developer who wanted everyday utilities without the usual trade-off:
+          upload your file to a stranger's server, or install yet another app.
+          Every tool, guide and page on this site is written, tested and fixed by
+          Yassine, and every message sent through the
           <RouterLink to="/contact">contact page</RouterLink>
-          is read by that person.
+          is read by Yassine personally.
         </p>
       </section>
 

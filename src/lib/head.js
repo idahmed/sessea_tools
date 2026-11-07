@@ -6,6 +6,7 @@ const ORGANIZATION = {
   '@type': 'Organization',
   name: 'sessea',
   url: `${SITE_URL}/`,
+  founder: { '@type': 'Person', name: 'Yassine' },
   sameAs: TOOLS.map((tool) => tool.href),
 }
 
@@ -18,7 +19,7 @@ const STATIC_PAGES = {
   about: {
     title: 'About sessea tools',
     description:
-      'Who builds sessea, how the tools process files on your device, and how the site is funded.',
+      'sessea is built by Yassine, an independent developer. How the tools process files on your device, how guides are written, and how the site is funded.',
   },
   guides: {
     title: 'Guides: images, audio, devices, units, typing and calculations',
