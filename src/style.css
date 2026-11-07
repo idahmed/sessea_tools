@@ -708,3 +708,164 @@ textarea {
     padding-bottom: 2.4rem;
   }
 }
+
+/* —— accessibility —— */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 50;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.45rem;
+  background: var(--accent);
+  color: var(--paper);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* —— long-form content (guides, tool pages) —— */
+.prose-body ol {
+  margin: 0;
+  padding-left: 1.35rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.prose-body h2 {
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
+}
+
+.prose-head .byline {
+  margin: 0.35rem 0 0;
+  color: var(--soft);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.eyebrow a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.eyebrow a:hover {
+  text-decoration: underline;
+}
+
+.prose-body .note {
+  padding: 0.75rem 0.95rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 0.45rem 0.45rem 0;
+  background: var(--accent-wash);
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: var(--panel);
+}
+
+.table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.table-wrap caption {
+  padding: 0.6rem 0.8rem;
+  color: var(--soft);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.table-wrap th,
+.table-wrap td {
+  padding: 0.55rem 0.8rem;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table-wrap th {
+  color: var(--ink);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.table-wrap td {
+  color: var(--muted);
+}
+
+.toc {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: var(--panel);
+}
+
+.toc-title {
+  margin: 0 0 0.45rem !important;
+  color: var(--soft) !important;
+  font-family: var(--font-mono);
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.toc ol {
+  gap: 0.25rem;
+}
+
+.toc li {
+  font-size: 0.92rem !important;
+}
+
+.guide-index small {
+  color: var(--soft);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.tool-open {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.1rem;
+}
+
+.tool-open .cta {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+.tool-open span {
+  color: var(--soft);
+  font-size: 0.88rem;
+}
+
+.updates {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+.updates li {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.updates time {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}

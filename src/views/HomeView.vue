@@ -1,69 +1,16 @@
 <script setup>
-import { computed } from 'vue'
 import HeroSignal from '@/components/HeroSignal.vue'
-import JsonLd from '@/components/JsonLd.vue'
 import { GUIDES } from '@/lib/guides'
-import { HOME_FAQ, SITE_URL, SITES } from '@/lib/sites'
+import { HOME_FAQ } from '@/lib/sites'
+import { TOOLS } from '@/lib/tools'
 
-const faqSchema = computed(() => ({
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: HOME_FAQ.map((item) => ({
-    '@type': 'Question',
-    name: item.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.a,
-    },
-  })),
-}))
-
-const hubSchema = computed(() => ([
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'sessea tools',
-    url: `${SITE_URL}/`,
-    description:
-      'Private-by-default browser utilities: calculator, image tools, audio tools, and hardware tests.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'sessea',
-      url: `${SITE_URL}/`,
-    },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'sessea browser tools',
-    itemListElement: SITES.map((site, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: site.seoTitle,
-      url: site.href,
-      description: site.seoDescription,
-      item: {
-        '@type': 'SoftwareApplication',
-        name: site.title,
-        url: site.href,
-        applicationCategory: 'UtilitiesApplication',
-        operatingSystem: 'Any',
-        offers: {
-          '@type': 'Offer',
-          price: '0',
-          priceCurrency: 'USD',
-        },
-      },
-    })),
-  },
-]))
+const latestGuides = [...GUIDES]
+  .sort((a, b) => b.published.localeCompare(a.published))
+  .slice(0, 6)
 </script>
 
 <template>
   <div class="home">
-    <JsonLd :data="hubSchema" />
-    <JsonLd :data="faqSchema" />
-
     <section class="hero">
       <HeroSignal />
 
@@ -92,16 +39,16 @@ const hubSchema = computed(() => ([
       </div>
 
       <ol class="tool-index">
-        <li v-for="(site, index) in SITES" :key="site.id">
-          <a class="tool-row" :href="site.href" :title="site.seoTitle">
+        <li v-for="(tool, index) in TOOLS" :key="tool.id">
+          <RouterLink class="tool-row" :to="`/tools/${tool.id}`">
             <span class="tool-num">{{ String(index + 1).padStart(2, '0') }}</span>
             <span class="tool-main">
-              <strong>{{ site.title }}</strong>
-              <em>{{ site.seoDescription }}</em>
+              <strong>{{ tool.title }}</strong>
+              <em>{{ tool.seoDescription }}</em>
             </span>
-            <span class="tool-host">{{ site.host }}</span>
+            <span class="tool-host">{{ tool.host }}</span>
             <span class="tool-go" aria-hidden="true">→</span>
-          </a>
+          </RouterLink>
         </li>
       </ol>
     </section>
@@ -128,10 +75,13 @@ const hubSchema = computed(() => ([
     </section>
 
     <section class="seo-block" aria-labelledby="guides-title">
-      <h2 id="guides-title">Guides</h2>
-      <p>Short articles if you want context before you open a tool.</p>
+      <h2 id="guides-title">Latest guides</h2>
+      <p>
+        Practical articles on image and audio formats, device troubleshooting and
+        calculator use. <RouterLink to="/guides">See all guides</RouterLink>.
+      </p>
       <ul class="home-guides">
-        <li v-for="guide in GUIDES" :key="guide.slug">
+        <li v-for="guide in latestGuides" :key="guide.slug">
           <RouterLink :to="`/guides/${guide.slug}`">{{ guide.title }}</RouterLink>
         </li>
       </ul>

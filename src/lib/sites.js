@@ -5,73 +5,25 @@ export const SITE_NAME = 'sessea tools'
 
 export const CONTACT_EMAIL = 'idahmed.yassine@gmail.com'
 
-/** Update these when you deploy each app. */
-export const SITES = [
-  {
-    id: 'calc',
-    label: 'Calculator',
-    title: 'Scientific calculator',
-    host: 'calc.sessea.com',
-    blurb: 'Sin, cos, log, memory, and history — offline-ready.',
-    href: 'https://calc.sessea.com',
-    seoTitle: 'Free scientific calculator online',
-    seoDescription:
-      'Browser scientific calculator with trigonometry, logs, memory, and history. Works offline. No account.',
-  },
-  {
-    id: 'img',
-    label: 'Image tools',
-    title: 'Image tools',
-    host: 'img.sessea.com',
-    blurb: 'Convert, resize, crop, rotate, enhance, watermark.',
-    href: 'https://img.sessea.com',
-    seoTitle: 'Free online image tools',
-    seoDescription:
-      'Convert, resize, crop, rotate, enhance, and watermark images in your browser. No upload required.',
-  },
-  {
-    id: 'audio',
-    label: 'Audio tools',
-    title: 'Audio tools',
-    host: 'audio.sessea.com',
-    blurb: 'Convert, trim, merge, fade, loop — no upload.',
-    href: 'https://audio.sessea.com',
-    seoTitle: 'Free online audio tools',
-    seoDescription:
-      'Convert, compress, trim, merge, and edit audio locally in your browser. Private and free.',
-  },
-  {
-    id: 'hw',
-    label: 'Hardware test',
-    title: 'Hardware test',
-    host: 'hw.sessea.com',
-    blurb: 'Mic, camera, speakers, keyboard, mouse checks.',
-    href: 'https://hw.sessea.com',
-    seoTitle: 'Free hardware test online',
-    seoDescription:
-      'Test microphone, camera, speakers, keyboard, and mouse in your browser. Private device checks.',
-  },
-]
-
 export const HOME_FAQ = [
   {
     q: 'Are sessea tools free?',
-    a: 'Yes. The calculator, image tools, audio tools, and hardware tests are free to use with no account.',
+    a: 'Yes. The calculator, image tools, audio tools and hardware tests are free and need no account. Ads on the pages pay for hosting.',
   },
   {
     q: 'Do you upload my files?',
-    a: 'No. Image and audio processing, plus mic/camera streams, stay in your browser. We do not host your uploads.',
+    a: 'No. Images and audio are processed in your browser tab, and camera and microphone streams stay in the page. You can check this yourself with the steps in our guide on browser-only tools.',
   },
   {
-    q: 'Do I need to create an account?',
-    a: 'No. Every tool works without signing in. Optional preferences may be saved in localStorage on your device.',
+    q: 'Do the tools work offline?',
+    a: 'Yes, after the first visit. Each tool is a small web app that your browser keeps, so you can use it without a connection.',
   },
   {
-    q: 'Where are the tools hosted?',
-    a: 'The hub is sessea.com. Apps live on calc.sessea.com, img.sessea.com, audio.sessea.com, and hw.sessea.com.',
+    q: 'Which browsers are supported?',
+    a: 'Current versions of Chrome, Edge, Firefox and Safari, on desktop and mobile. Some options, like AVIF export or choosing a speaker output, depend on the browser.',
   },
   {
-    q: 'Where can I read how the tools work?',
-    a: 'See the Guides section on sessea.com for local editing and hardware checklists, plus About, Privacy, and Terms.',
+    q: 'How do I report a bug or a mistake in a guide?',
+    a: 'Use the contact page. Corrections to guides are made and dated on the guide itself.',
   },
 ]

@@ -3,100 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>sessea tools — free private browser utilities</title>
-    <meta
-      name="description"
-      content="Free private browser tools by sessea: scientific calculator, image editor, audio editor, and hardware tests. No uploads, no accounts — processing stays on your device."
-    />
-    <meta
-      name="keywords"
-      content="sessea tools, free browser tools, private online calculator, image editor no upload, audio editor browser, hardware test online, mic test, webcam test"
-    />
+    <!--app-head-->
     <meta name="author" content="sessea" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="googlebot" content="index, follow" />
-    <link rel="canonical" href="https://sessea.com/" />
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
-    <meta name="google-adsense-account" content="ca-pub-5424228525679012">
+    <meta name="google-adsense-account" content="ca-pub-5424228525679012" />
     <meta name="theme-color" content="#1a5c4a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="sessea" />
     <meta name="application-name" content="sessea tools" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="sessea tools" />
-    <meta property="og:title" content="sessea tools — free private browser utilities" />
-    <meta
-      property="og:description"
-      content="Calculator, image, audio, and hardware tools that run in your browser. No uploads. No accounts."
-    />
-    <meta property="og:url" content="https://sessea.com/" />
-    <meta property="og:locale" content="en_US" />
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="sessea tools — free private browser utilities" />
-    <meta
-      name="twitter:description"
-      content="Calculator, image, audio, and hardware tools that run in your browser. No uploads. No accounts."
-    />
-    <meta name="twitter:url" content="https://sessea.com/" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "sessea",
-        "url": "https://sessea.com/",
-        "description": "Private-by-default browser utilities.",
-        "sameAs": [
-          "https://calc.sessea.com",
-          "https://img.sessea.com",
-          "https://audio.sessea.com",
-          "https://hw.sessea.com"
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "sessea tools",
-        "url": "https://sessea.com/",
-        "description": "Free private browser tools: scientific calculator, image tools, audio tools, and hardware tests.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "sessea",
-          "url": "https://sessea.com/"
-        },
-        "inLanguage": "en"
-      }
+    <script>
+      // Set the theme before first paint so dark mode users do not see a light flash.
+      (function () {
+        var theme = null
+        try { theme = localStorage.getItem('sessea-tools-theme') } catch (e) {}
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+        document.documentElement.dataset.theme = theme
+      })()
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5424228525679012" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <noscript>
-      <main style="max-width:40rem;margin:2rem auto;padding:0 1.25rem;font-family:Georgia,serif;line-height:1.6">
-        <h1>sessea tools</h1>
-        <p>
-          Free private browser utilities: scientific calculator, image tools,
-          audio tools, and hardware tests. Processing stays on your device —
-          no uploads and no accounts required.
-        </p>
-        <p>Enable JavaScript to use the interactive tools, or read:</p>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/guides">Guides</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-        <p>Apps: calc.sessea.com · img.sessea.com · audio.sessea.com · hw.sessea.com</p>
-      </main>
-    </noscript>
-    <script type="module" src="/src/main.js"></script>
+    <div id="app"><!--app-html--></div>
+    <script type="module" src="/src/entry-client.js"></script>
   </body>
 </html>

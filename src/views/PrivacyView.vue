@@ -3,7 +3,7 @@
     <header class="prose-head">
       <p class="eyebrow">Privacy</p>
       <h1>Privacy Policy</h1>
-      <p class="lede">Last updated: October 2026</p>
+      <p class="lede">Last updated: 7 November 2026</p>
     </header>
 
     <div class="prose-body">
@@ -60,30 +60,47 @@
       <section>
         <h2>5. Advertising</h2>
         <p>
-          Pages may display advertisements from Google AdSense and other
-          advertising partners. Those partners may use cookies, device
-          identifiers, and similar technologies to show ads and measure
-          performance across sites. Advertising technology is separate from the
-          local handling of your project files.
+          sessea.com and the tool subdomains show ads served by Google AdSense.
+          Third-party vendors, including Google, use cookies to serve ads based on
+          your prior visits to this website or other websites. Google's use of
+          advertising cookies enables it and its partners to serve ads to you based
+          on your visits to this site and other sites on the internet.
         </p>
         <p>
-          You can manage personalized ads in
-          <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">
-            Google Ads Settings
-          </a>
-          and review
-          <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">
-            how Google uses advertising data
-          </a>.
+          You can opt out of personalised advertising in
+          <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>.
+          You can also opt out of some third-party vendors' use of cookies for
+          personalised advertising at
+          <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a>.
+          Read
+          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a>
+          for details.
+        </p>
+        <p>
+          If you visit from the European Economic Area, the United Kingdom or
+          Switzerland, you are asked for consent before personalised ads or
+          advertising cookies are used, and you can change your choice at any time
+          from the privacy message link on the page.
+        </p>
+        <p>
+          Advertising is separate from the tools: ad scripts have no access to the
+          files you open or the media streams you test.
         </p>
       </section>
 
       <section>
-        <h2>6. Cookies</h2>
+        <h2>6. Cookies and hosting</h2>
         <p>
-          We do not use first-party analytics cookies for these tools. Advertising
-          partners may set their own cookies. You can control cookies in your
-          browser settings; blocking them may affect ads but not local tool use.
+          sessea does not set its own analytics or tracking cookies. Advertising
+          partners may set their own cookies as described above. You can block or
+          delete cookies in your browser settings. The tools keep working without
+          them.
+        </p>
+        <p>
+          The sites are hosted on Cloudflare. Like any web host, Cloudflare
+          processes technical data such as your IP address and browser type to
+          deliver pages and protect the sites from abuse. sessea does not use this
+          data to identify visitors.
         </p>
       </section>
 

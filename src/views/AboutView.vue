@@ -1,87 +1,109 @@
 <script setup>
-import { SITES } from '@/lib/sites'
+import { formatDate } from '@/lib/guides'
+import { TOOLS } from '@/lib/tools'
+
+/** Dated log of meaningful site changes. Add an entry when something ships. */
+const UPDATES = [
+  {
+    date: '2026-11-07',
+    text: 'Added a documentation page for each tool and nine new guides on image formats, file size, photo metadata, audio bitrate, device troubleshooting and calculator use. Fixed the calculator so function keys no longer discard the rest of an expression.',
+  },
+  {
+    date: '2026-10-17',
+    text: 'Launched the sessea.com hub with the first four guides, the privacy policy and the terms of service.',
+  },
+  {
+    date: '2026-10-15',
+    text: 'Released the calculator, image tools, audio tools and hardware tests on their own subdomains.',
+  },
+]
 </script>
 
 <template>
   <article class="prose">
     <header class="prose-head">
       <p class="eyebrow">About</p>
-      <h1>About sessea — private browser tools, built to stay local.</h1>
+      <h1>About sessea tools</h1>
       <p class="lede">
-        A small toolkit for calculating, editing media, and checking devices —
-        without accounts or mandatory uploads.
+        Small, focused browser tools for calculating, editing images and audio,
+        and checking devices, built so your files stay on your machine.
       </p>
     </header>
 
     <div class="prose-body">
       <section>
-        <h2>Who we are</h2>
+        <h2>Who builds sessea</h2>
         <p>
-          sessea builds focused browser utilities for everyday tasks. The hub at
-          <a href="https://sessea.com">sessea.com</a>
-          links four apps: a scientific calculator, image tools, audio tools, and
-          hardware tests. Each app is meant to open quickly, do one job well, and
-          leave your files on your machine whenever the browser APIs allow it.
+          sessea is built and maintained by an independent software developer who
+          wanted everyday utilities without the usual trade-off: upload your file to
+          a stranger's server, or install yet another app. Every tool, guide and
+          page on this site is written, tested and fixed by the same person, and
+          every message sent through the
+          <RouterLink to="/contact">contact page</RouterLink>
+          is read by that person.
         </p>
+      </section>
+
+      <section>
+        <h2>What the tools are</h2>
+        <ul>
+          <li v-for="tool in TOOLS" :key="tool.id">
+            <RouterLink :to="`/tools/${tool.id}`">{{ tool.title }}</RouterLink>:
+            {{ tool.blurb }}, at <a :href="tool.href">{{ tool.host }}</a>.
+          </li>
+        </ul>
         <p>
-          We are not a social network and we do not sell user accounts. The product
-          is the tools themselves — quiet software for students, creators, and
-          anyone who wants a fast edit or device check without signing up.
+          Each tool lives on its own subdomain so it loads fast and does one job.
+          This site, sessea.com, documents them: what each one does, its limits,
+          and guides for the tasks people use them for.
         </p>
       </section>
 
       <section>
         <h2>How the tools work</h2>
         <p>
-          Most processing happens in your tab with standard web platform features.
-          Images and audio you select are read locally. Microphone and camera tests
-          use permissions you grant in the browser, then preview streams in the page.
-          Calculator history and light preferences may be stored in localStorage on
-          your device so the next visit feels familiar.
-        </p>
-        <p>
-          Close a tab and in-memory media goes with it. Downloads only appear where
-          you choose to save them. That model is the core of the sessea privacy
-          promise; details live in the
-          <RouterLink to="/privacy">Privacy Policy</RouterLink>.
+          The tools use standard browser features (canvas for images, the Web Audio
+          API for sound, and the media devices API for cameras and microphones) to
+          do the work in your browser tab. Files you open are never uploaded.
+          The guide
+          <RouterLink to="/guides/local-browser-tools">How browser-only tools keep your files private</RouterLink>
+          explains the technique and shows how to verify it yourself in two minutes.
         </p>
       </section>
 
       <section>
-        <h2>What’s included</h2>
-        <ul>
-          <li v-for="site in SITES" :key="site.id">
-            <a :href="site.href">{{ site.title }}</a>
-            — {{ site.blurb }}
+        <h2>How the guides are written</h2>
+        <p>
+          Guides are written around real tasks and checked against the tools as
+          they behave today: option ranges, defaults and limits come from the
+          tools themselves. Each guide shows when it was published and last
+          updated. When a tool changes, the guides that describe it are updated
+          in the same release. If you find a mistake,
+          <RouterLink to="/contact">report it</RouterLink>
+          and it will be corrected.
+        </p>
+      </section>
+
+      <section>
+        <h2>How sessea is funded</h2>
+        <p>
+          The tools are free and have no paid tier. Pages show ads from Google
+          AdSense, which pay for the domains and hosting. Ads never have access to
+          the files you process. The
+          <RouterLink to="/privacy">privacy policy</RouterLink>
+          explains how advertising cookies work and how to opt out of personalised
+          ads.
+        </p>
+      </section>
+
+      <section>
+        <h2>Recent updates</h2>
+        <ul class="updates">
+          <li v-for="item in UPDATES" :key="item.date">
+            <time :datetime="item.date">{{ formatDate(item.date) }}</time>
+            <span>{{ item.text }}</span>
           </li>
         </ul>
-        <p>
-          Prefer step-by-step reading first?
-          <RouterLink to="/guides">Browse the guides</RouterLink>
-          for local editing and hardware checklists.
-        </p>
-      </section>
-
-      <section>
-        <h2>What we don’t do</h2>
-        <p>
-          We don’t require registration. We don’t host your project uploads as a
-          cloud drive. We don’t build an editing profile from your files. Pages may
-          still show third-party ads; advertising cookies are explained on the
-          privacy page and are separate from local file processing.
-        </p>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>
-          Feedback and support:
-          <RouterLink to="/contact">contact sessea</RouterLink>.
-          Legal pages:
-          <RouterLink to="/privacy">Privacy</RouterLink>
-          ·
-          <RouterLink to="/terms">Terms</RouterLink>.
-        </p>
       </section>
     </div>
   </article>

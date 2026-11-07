@@ -6,6 +6,10 @@
   },
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "single-page-application"
+    // Every page is prerendered to its own .html file. Unknown URLs get dist/404.html
+    // with a real 404 status instead of the home page with status 200.
+    "not_found_handling": "404-page",
+    // /about serves about.html, /about/ redirects to /about.
+    "html_handling": "auto-trailing-slash"
   }
 }
