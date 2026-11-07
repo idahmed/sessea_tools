@@ -79,9 +79,10 @@
         </p>
         <p>
           If you visit from the European Economic Area, the United Kingdom or
-          Switzerland, you are asked for consent before personalised ads or
-          advertising cookies are used, and you can change your choice at any time
-          from the privacy message link on the page.
+          Switzerland, personalised ads and advertising cookies are only used after
+          you give consent through a Google-certified consent message. Where that
+          message is shown, you can change your choice at any time from the privacy
+          settings link it adds to the page.
         </p>
         <p>
           Advertising is separate from the tools: ad scripts have no access to the
